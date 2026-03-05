@@ -17,12 +17,17 @@ const nameList = [{
       }, "picture": { 
         "medium": "https://randomuser.me/api/portraits/med/men/75.jpg", 
       },
+      "id": {
+        "name": "SSN",
+        "value": "405-88-3636"
+      }
 }];
 
 const nameListComponent =()=>{
     return (nameList.map((aName) => { 
         return (
         <NameListItem 
+        key={aName.id.value}
             name={`${aName.name.first} ${aName.name.last}`}
             city={aName.location.city} 
             email={aName.email}
@@ -32,13 +37,13 @@ const nameListComponent =()=>{
 };
 
     return(
-    <reactfragment> 
+    <React.Fragment> 
        <h1>Name List</h1>
        <hr/>
        <ul>
         {nameListComponent()}
        </ul>
-    </reactfragment> 
+    </React.Fragment> 
 )
 }  
 export default NameList; 
