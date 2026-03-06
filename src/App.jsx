@@ -1,12 +1,14 @@
-import './App.css'
- 
+//import './App.css'
+import HeaderBar from './Components/HeaderBar/HeaderBar';
 import NameList from './Components/NameList/NameList';
+
+
 function App() {
   return (
- <>
-      <h1>Hello Vite + React</h1>
-      <NameList />  
-  </>
+ <div>
+    <HeaderBar /> 
+    <NameList />  
+  </div>
   )
 }
 
